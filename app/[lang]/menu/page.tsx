@@ -43,7 +43,7 @@ const categoryOrder = [
 const ui = {
   tr: {
     menu: "Menü",
-    subtitle: "Taze, hızlı ve esnaf lezzetinin en iyi hali.",
+    subtitle: "Beyazıt’ın hızlı, taze ve lezzetli büfe menüsü.",
     all: "Tümü",
     view: "İncele",
     empty: "Bu kategoride ürün yok.",
@@ -52,7 +52,7 @@ const ui = {
   },
   en: {
     menu: "Menu",
-    subtitle: "Fresh, fast and the best taste of local street food.",
+    subtitle: "Fresh and fast local street food in Beyazıt.",
     all: "All",
     view: "View",
     empty: "No products in this category.",
@@ -61,7 +61,7 @@ const ui = {
   },
   de: {
     menu: "Speisekarte",
-    subtitle: "Frisch, schnell und der beste Geschmack lokaler Küche.",
+    subtitle: "Frische und schnelle lokale Küche in Beyazıt.",
     all: "Alle",
     view: "Ansehen",
     empty: "Keine Produkte in dieser Kategorie.",
@@ -70,7 +70,7 @@ const ui = {
   },
   ru: {
     menu: "Меню",
-    subtitle: "Свежо, быстро и лучший вкус местной кухни.",
+    subtitle: "Свежая и быстрая местная кухня в Беязыте.",
     all: "Все",
     view: "Подробнее",
     empty: "В этой категории пока нет товаров.",
@@ -216,11 +216,11 @@ export default function MenuPage() {
       : sortedProducts.filter((p) => p.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-[#f7efe4] px-4 py-6 text-[#24170f]">
+    <main className="min-h-screen overflow-hidden bg-[#f6eadb] px-4 py-5 text-[#23150d]">
       <div className="fixed right-4 top-4 z-50 flex gap-2">
         <a
           href="/"
-          className="rounded-full bg-white/90 px-4 py-2 text-sm font-black text-[#24170f] shadow-lg backdrop-blur transition hover:-translate-y-0.5"
+          className="rounded-full border border-white/40 bg-white/80 px-4 py-2 text-xs font-black shadow-xl backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white"
         >
           {t.home}
         </a>
@@ -229,36 +229,51 @@ export default function MenuPage() {
           href="https://wa.me/902125178513"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full bg-gradient-to-r from-[#7a3b16] to-[#e88938] px-4 py-2 text-sm font-black text-white shadow-lg transition hover:-translate-y-0.5"
+          className="rounded-full bg-gradient-to-r from-[#6b2f12] via-[#b85b20] to-[#f2a23a] px-4 py-2 text-xs font-black text-white shadow-xl transition hover:-translate-y-0.5"
         >
           {t.contact}
         </a>
       </div>
 
-      <div className="mx-auto max-w-6xl">
-        <header className="relative mb-7 overflow-hidden rounded-[2.5rem] bg-[#1b130f] p-8 text-white shadow-2xl">
-          <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#e88938]/20 blur-3xl" />
-          <div className="absolute -bottom-24 left-10 h-56 w-56 rounded-full bg-[#7a3b16]/30 blur-3xl" />
+      <div className="mx-auto max-w-7xl">
+        <header className="relative mb-6 overflow-hidden rounded-[2.5rem] bg-[#1b100b] p-7 text-white shadow-2xl md:p-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(242,162,58,0.25),transparent_35%),radial-gradient(circle_at_10%_90%,rgba(107,47,18,0.5),transparent_35%)]" />
 
-          <div className="relative">
-            <p className="mb-3 text-xs font-black tracking-[0.45em] text-[#f0a24c]">
-              PAŞAZADE BÜFE
-            </p>
-            <h1 className="text-5xl font-black tracking-tight">{t.menu}</h1>
-            <p className="mt-3 max-w-xl text-sm text-white/60">{t.subtitle}</p>
+          <div className="relative flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="mb-3 text-xs font-black tracking-[0.48em] text-[#f2a23a]">
+                PAŞAZADE BÜFE
+              </p>
+
+              <h1 className="text-5xl font-black tracking-tight md:text-7xl">
+                {t.menu}
+              </h1>
+
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/60 md:text-base">
+                {t.subtitle}
+              </p>
+            </div>
+
+            <div className="flex h-28 w-52 items-center justify-center overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 backdrop-blur md:h-36 md:w-64">
+              <img
+                src="/logo.png"
+                alt="Paşazade Büfe"
+                className="h-full w-full scale-[1.55] object-contain drop-shadow-2xl"
+              />
+            </div>
           </div>
         </header>
 
-        <div className="sticky top-0 z-40 -mx-4 mb-7 bg-[#f7efe4]/90 px-4 py-3 backdrop-blur">
+        <div className="sticky top-0 z-40 -mx-4 mb-7 border-y border-black/5 bg-[#f6eadb]/80 px-4 py-3 backdrop-blur-2xl">
           <div className="flex gap-3 overflow-x-auto pb-1">
             {categoriesTR.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`shrink-0 rounded-full px-5 py-3 text-sm font-black shadow-sm transition-all ${
+                className={`shrink-0 rounded-2xl px-5 py-3 text-sm font-black transition-all duration-300 ${
                   activeCategory === cat
-                    ? "bg-gradient-to-r from-[#6b3516] to-[#e88938] text-white shadow-lg"
-                    : "border border-black/10 bg-white/80 text-[#24170f] hover:-translate-y-0.5 hover:bg-white"
+                    ? "scale-105 bg-gradient-to-r from-[#6b2f12] via-[#b85b20] to-[#f2a23a] text-white shadow-xl shadow-orange-900/20"
+                    : "border border-black/10 bg-white/70 text-[#2a190f] shadow-sm hover:-translate-y-0.5 hover:bg-white hover:shadow-lg"
                 }`}
               >
                 {cat === "Tümü" ? t.all : translateCategory(cat)}
@@ -267,35 +282,35 @@ export default function MenuPage() {
           </div>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((item, index) => (
             <article
               key={item.id}
-              className="group animate-[fadeUp_0.45s_ease_both] overflow-hidden rounded-[2rem] border border-black/5 bg-white/85 shadow-md backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="group animate-[fadeUp_0.45s_ease_both] overflow-hidden rounded-[2.2rem] border border-white/70 bg-white/75 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl"
               style={{ animationDelay: `${index * 35}ms` }}
             >
-              <div className="relative h-52 overflow-hidden bg-[#ead8c4]">
+              <div className="relative h-60 overflow-hidden bg-[#ead2b9]">
                 {item.image_url ? (
                   <img
                     src={item.image_url}
                     alt={translateProduct(item.name)}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                   />
                 ) : (
-                  <div className="flex h-full w-full items-center justify-center text-5xl">
+                  <div className="flex h-full w-full items-center justify-center text-6xl">
                     🍽️
                   </div>
                 )}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-transparent" />
 
-                <p className="absolute left-4 top-4 rounded-full bg-white/90 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#bf5a19] shadow-sm">
+                <p className="absolute left-4 top-4 rounded-full bg-white/90 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#bd5a19] shadow-md backdrop-blur">
                   {translateCategory(item.category)}
                 </p>
               </div>
 
               <div className="p-5">
-                <h2 className="text-2xl font-black leading-tight text-[#1b130f]">
+                <h2 className="min-h-[64px] text-2xl font-black leading-tight text-[#1b100b]">
                   {translateProduct(item.name)}
                 </h2>
 
@@ -306,11 +321,11 @@ export default function MenuPage() {
                 )}
 
                 <div className="mt-5 flex items-center justify-between gap-3">
-                  <p className="text-3xl font-black text-[#7a3b16]">
+                  <p className="text-3xl font-black text-[#733313]">
                     {item.price || ""}
                   </p>
 
-                  <button className="rounded-full bg-[#1b130f] px-5 py-3 text-xs font-black text-white shadow-md transition group-hover:bg-gradient-to-r group-hover:from-[#7a3b16] group-hover:to-[#e88938]">
+                  <button className="rounded-full bg-[#1b100b] px-5 py-3 text-xs font-black text-white shadow-lg transition group-hover:bg-gradient-to-r group-hover:from-[#6b2f12] group-hover:to-[#f2a23a]">
                     {t.view}
                   </button>
                 </div>
@@ -323,7 +338,7 @@ export default function MenuPage() {
               {t.empty}
             </div>
           )}
-        </div>
+        </section>
       </div>
 
       <style jsx global>{`
