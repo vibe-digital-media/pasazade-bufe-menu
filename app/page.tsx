@@ -6,36 +6,59 @@ export default function Home() {
     { code: "ru", flag: "🇷🇺", title: "Русский", subtitle: "Rusça" },
   ];
 
+  const address =
+    "Mimar Hayrettin Mah, Beyazıt, Sucu Baki Sk. No:2/1, 34126 İstanbul";
+
   const mapUrl =
-    "https://www.google.com/maps/search/?api=1&query=Mimar+Hayrettin+Mahallesi+Beyazıt+Sucu+Baki+Sk.+No:2/1+34126+İstanbul";
+    "https://www.google.com/maps/search/?api=1&query=Mimar+Hayrettin+Mah+Beyazıt+Sucu+Baki+Sk+No:2/1+34126+İstanbul";
+
+  const mapEmbed =
+    "https://www.google.com/maps?q=Mimar%20Hayrettin%20Mah%20Beyaz%C4%B1t%20Sucu%20Baki%20Sk%20No%3A2%2F1%2034126%20%C4%B0stanbul&output=embed";
 
   return (
     <main
-      className="min-h-screen text-[#111] flex items-center justify-center px-5 py-8"
+      className="relative min-h-screen overflow-hidden px-5 py-8 text-[#111]"
       style={{
         backgroundColor: "#f8f5ef",
         backgroundImage:
-          "radial-gradient(circle at 1px 1px, rgba(0,0,0,0.055) 1px, transparent 0)",
+          "radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0)",
         backgroundSize: "24px 24px",
       }}
     >
-      <div className="w-full max-w-6xl text-center">
+      {/* 🔥 ARKA PLAN FOTOĞRAF */}
+      <div className="pointer-events-none absolute inset-0 z-0">
         <img
-          src="/logo.png"
-          alt="Paşazade Büfe Logo"
-          className="mx-auto mb-10 w-[360px] max-w-[85%] h-auto drop-shadow-md"
+          src="/bufe.png"
+          alt=""
+          className="h-full w-full object-cover opacity-[0.4]"
         />
 
-        <p className="mb-6 text-sm tracking-[0.45em] text-gray-400 font-semibold">
+        {/* Beyaz soft katman */}
+        <div className="absolute inset-0 bg-white/45" />
+      </div>
+
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center text-center">
+        
+        {/* LOGO */}
+        <div className="mb-4 h-[210px] w-full max-w-[520px] overflow-hidden">
+          <img
+            src="/logo.png"
+            alt="Paşazade Büfe Logo"
+            className="mx-auto h-full w-full scale-[1.85] object-contain drop-shadow-md"
+          />
+        </div>
+
+        <p className="mb-6 text-sm font-semibold tracking-[0.45em] text-gray-500">
           DİLİNİZİ SEÇİN
         </p>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+        {/* DİL SEÇENEKLERİ */}
+        <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-4">
           {languages.map((lang) => (
             <a
               key={lang.code}
               href={`/${lang.code}/menu`}
-              className="group rounded-3xl border border-black/10 bg-white/90 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="rounded-3xl border border-black/10 bg-white/90 p-6 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f8f5ef] text-2xl">
                 {lang.flag}
@@ -46,27 +69,42 @@ export default function Home() {
           ))}
         </div>
 
-        <section className="mx-auto mt-10 max-w-3xl rounded-3xl border border-black/10 bg-white/90 p-5 text-left shadow-sm">
-          <h3 className="text-xl font-extrabold">Paşazade Büfe</h3>
+        {/* HARİTA + İLETİŞİM */}
+        <section className="mt-10 w-full max-w-4xl overflow-hidden rounded-3xl border border-black/10 bg-white/95 text-left shadow-lg backdrop-blur">
+          
+          {/* HARİTA ÜSTTE */}
+          <div className="h-[300px] w-full border-b border-black/10">
+            <iframe
+              src={mapEmbed}
+              className="h-full w-full"
+              loading="lazy"
+            />
+          </div>
 
-          <p className="mt-2 text-sm leading-relaxed text-black/60">
-            Mimar Hayrettin Mah, Beyazıt, Sucu Baki Sk. No:2/1, 34126 İstanbul
-          </p>
+          {/* İLETİŞİM ALTI */}
+          <div className="p-5">
+            <h3 className="text-xl font-extrabold">Paşazade Büfe</h3>
 
-          <p className="mt-1 text-sm font-bold text-black/70">
-            Telefon: 0212 517 85 13
-          </p>
+            <p className="mt-2 text-sm leading-relaxed text-black/60">
+              {address}
+            </p>
 
-          <a
-            href={mapUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex rounded-full bg-black px-5 py-3 text-sm font-bold text-white transition hover:bg-[#222]"
-          >
-            Yol Tarifi Al
-          </a>
+            <p className="mt-1 text-sm font-bold text-black/70">
+              Telefon: 0212 517 85 13
+            </p>
+
+            <a
+              href={mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex rounded-full bg-black px-5 py-3 text-sm font-bold text-white transition hover:bg-[#222]"
+            >
+              Yol Tarifi Al
+            </a>
+          </div>
         </section>
 
+        {/* WHATSAPP */}
         <a
           href="https://wa.me/902125178513"
           target="_blank"
