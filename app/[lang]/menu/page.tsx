@@ -282,130 +282,130 @@ const descriptionTranslate: Record<string, Record<string, string>> = {
     Kuşburnu: "Vitaminli ve doğal bitki çayı.",
   },
   en: {
-    Köfte: "Grilled meatballs served in fresh bread with special sauces.",
-    Döner: "Daily prepared doner meat served in warm bread.",
-    "Tavuk Döner": "Flavorful chicken doner served with soft bread.",
-    Ciğer: "Seasoned liver served as a warm and filling option.",
-    "Soya Soslu Tavuk": "Chicken marinated with soy sauce for a rich flavor.",
-    "Kaşarlı Tost": "Classic toast with melted Turkish kashar cheese.",
-    "Karışık Tost": "A rich toast with sausage, salami and cheese.",
-    "Kavurmalı Tost": "Special toast prepared with roasted meat.",
-    "Sucuklu Tost": "Hot toast with spicy Turkish sausage.",
-    "Salamlı Tost": "Classic toast with salami and cheese.",
-    "Kavurma Kaşarlı Tost": "Roasted meat and cheese in a warm crispy toast.",
-    "Kavurma Kaşarlı": "A filling option with roasted meat and cheese.",
-    "Ton Balıklı": "Prepared with tuna and a fresh special mix.",
-    "Arnavut Ciğeri": "Classic Albanian liver prepared with special spices.",
-    Hamburger: "A filling hamburger prepared with fresh ingredients.",
-    Sosisli: "Classic hot dog with warm sausage and soft bread.",
-    "Sosisli (Amerikan salata ile)": "Hot dog served with American salad.",
-    Kaşarlı: "Simple and tasty sandwich with melted cheese.",
-    Karışık: "A rich sandwich with assorted deli ingredients.",
-    Vejetaryen: "A light and tasty option prepared with vegetables.",
-    Patso: "A filling sandwich packed with crispy fries.",
-    "Dürüm Tavuk Döner": "Chicken doner wrapped in thin lavash bread.",
-    "Köfte Dürüm": "Grilled meatballs wrapped in lavash for a filling taste.",
-    "Ciğer Dürüm": "Seasoned liver served in warm lavash.",
+    Köfte: "Grilled meatballs in fresh bread.",
+    Döner: "Daily doner served in warm bread.",
+    "Tavuk Döner": "Chicken doner with soft bread.",
+    Ciğer: "Seasoned liver, warm and filling.",
+    "Soya Soslu Tavuk": "Soy-marinated chicken with rich flavor.",
+    "Kaşarlı Tost": "Classic toast with melted cheese.",
+    "Karışık Tost": "Toast with sausage, salami and cheese.",
+    "Kavurmalı Tost": "Special toast with roasted meat.",
+    "Sucuklu Tost": "Hot toast with Turkish sausage.",
+    "Salamlı Tost": "Toast with salami and cheese.",
+    "Kavurma Kaşarlı Tost": "Roasted meat and cheese toast.",
+    "Kavurma Kaşarlı": "Roasted meat and cheese.",
+    "Ton Balıklı": "Tuna sandwich with fresh mix.",
+    "Arnavut Ciğeri": "Classic Albanian liver.",
+    Hamburger: "Hamburger with fresh ingredients.",
+    Sosisli: "Classic hot dog.",
+    "Sosisli (Amerikan salata ile)": "Hot dog with American salad.",
+    Kaşarlı: "Simple cheese sandwich.",
+    Karışık: "Mixed deli sandwich.",
+    Vejetaryen: "Light vegetable option.",
+    Patso: "Fries sandwich.",
+    "Dürüm Tavuk Döner": "Chicken doner wrap.",
+    "Köfte Dürüm": "Grilled meatball wrap.",
+    "Ciğer Dürüm": "Seasoned liver wrap.",
     "Greyfurt Suyu": "Refreshing grapefruit flavor.",
-    "Portakal Suyu": "Fresh and energetic orange flavor.",
-    Ayran: "Traditional refreshing yogurt drink.",
-    Kola: "Cold and refreshing carbonated drink.",
-    Fanta: "Orange flavored carbonated drink.",
-    Soda: "Natural sparkling mineral water.",
-    Cappy: "Refreshing fruit drink with different flavors.",
-    "0,5 Lt Su": "Ideal daily drinking water.",
-    "1,5 Lt Su": "Large bottle water option.",
-    "Nar Suyu": "Rich and natural pomegranate flavor.",
-    Çay: "Traditional Turkish tea for any time of day.",
-    Nescafe: "Practical and rich coffee taste.",
+    "Portakal Suyu": "Fresh orange flavor.",
+    Ayran: "Traditional yogurt drink.",
+    Kola: "Cold carbonated drink.",
+    Fanta: "Orange flavored soda.",
+    Soda: "Sparkling mineral water.",
+    Cappy: "Refreshing fruit drink.",
+    "0,5 Lt Su": "0.5L water.",
+    "1,5 Lt Su": "1.5L water.",
+    "Nar Suyu": "Pomegranate flavor.",
+    Çay: "Traditional Turkish tea.",
+    Nescafe: "Rich coffee taste.",
     Kapuçino: "Smooth coffee with milk foam.",
-    Salep: "A warm traditional winter drink.",
-    "Elma Çayı": "Light and aromatic apple tea.",
-    Kuşburnu: "Natural rosehip tea rich in flavor.",
+    Salep: "Warm winter drink.",
+    "Elma Çayı": "Aromatic apple tea.",
+    Kuşburnu: "Natural rosehip tea.",
   },
   de: {
-    Köfte: "Gegrillte Frikadellen im frischen Brot mit speziellen Saucen.",
-    Döner: "Täglich zubereitetes Dönerfleisch im warmen Brot.",
-    "Tavuk Döner": "Leckerer Hähnchen-Döner mit weichem Brot.",
-    Ciğer: "Gewürzte Leber als warme und sättigende Option.",
-    "Soya Soslu Tavuk": "Hähnchen mit Sojasauce mariniert, aromatisch und herzhaft.",
-    "Kaşarlı Tost": "Klassischer Toast mit geschmolzenem Käse.",
-    "Karışık Tost": "Reichhaltiger Toast mit Wurst, Salami und Käse.",
-    "Kavurmalı Tost": "Spezialtoast mit geröstetem Fleisch.",
-    "Sucuklu Tost": "Warmer Toast mit würziger türkischer Wurst.",
-    "Salamlı Tost": "Klassischer Toast mit Salami und Käse.",
-    "Kavurma Kaşarlı Tost": "Geröstetes Fleisch und Käse im knusprigen Toast.",
-    "Kavurma Kaşarlı": "Sättigende Option mit geröstetem Fleisch und Käse.",
-    "Ton Balıklı": "Mit Thunfisch und frischer Spezialmischung zubereitet.",
-    "Arnavut Ciğeri": "Klassische albanische Leber mit besonderen Gewürzen.",
-    Hamburger: "Sättigender Hamburger mit frischen Zutaten.",
-    Sosisli: "Klassischer Hot Dog mit warmer Wurst und weichem Brot.",
+    Köfte: "Gegrillte Frikadellen im Brot.",
+    Döner: "Täglicher Döner im warmen Brot.",
+    "Tavuk Döner": "Hähnchen-Döner mit weichem Brot.",
+    Ciğer: "Gewürzte Leber, warm und sättigend.",
+    "Soya Soslu Tavuk": "Hähnchen mit Sojasauce.",
+    "Kaşarlı Tost": "Toast mit geschmolzenem Käse.",
+    "Karışık Tost": "Toast mit Wurst, Salami und Käse.",
+    "Kavurmalı Tost": "Toast mit geröstetem Fleisch.",
+    "Sucuklu Tost": "Toast mit türkischer Wurst.",
+    "Salamlı Tost": "Toast mit Salami und Käse.",
+    "Kavurma Kaşarlı Tost": "Fleisch und Käse Toast.",
+    "Kavurma Kaşarlı": "Fleisch und Käse.",
+    "Ton Balıklı": "Thunfisch Sandwich.",
+    "Arnavut Ciğeri": "Albanische Leber.",
+    Hamburger: "Hamburger mit frischen Zutaten.",
+    Sosisli: "Klassischer Hot Dog.",
     "Sosisli (Amerikan salata ile)": "Hot Dog mit amerikanischem Salat.",
-    Kaşarlı: "Einfaches und leckeres Sandwich mit geschmolzenem Käse.",
-    Karışık: "Reichhaltiges Sandwich mit verschiedenen Zutaten.",
-    Vejetaryen: "Leichte und leckere Option mit Gemüse.",
-    Patso: "Sättigendes Sandwich mit knusprigen Pommes.",
-    "Dürüm Tavuk Döner": "Hähnchen-Döner in dünnem Lavash-Brot.",
-    "Köfte Dürüm": "Gegrillte Frikadellen im Lavash-Wrap.",
-    "Ciğer Dürüm": "Gewürzte Leber im warmen Lavash.",
+    Kaşarlı: "Einfaches Käse Sandwich.",
+    Karışık: "Gemischtes Sandwich.",
+    Vejetaryen: "Leichte Gemüseoption.",
+    Patso: "Pommes Sandwich.",
+    "Dürüm Tavuk Döner": "Hähnchen Döner Wrap.",
+    "Köfte Dürüm": "Frikadellen Wrap.",
+    "Ciğer Dürüm": "Leber Wrap.",
     "Greyfurt Suyu": "Erfrischender Grapefruitgeschmack.",
-    "Portakal Suyu": "Frischer und lebendiger Orangengeschmack.",
-    Ayran: "Traditionelles erfrischendes Joghurtgetränk.",
-    Kola: "Kaltes und erfrischendes kohlensäurehaltiges Getränk.",
-    Fanta: "Kohlensäurehaltiges Getränk mit Orangengeschmack.",
-    Soda: "Natürliches Mineralwasser mit Kohlensäure.",
-    Cappy: "Erfrischendes Fruchtgetränk in verschiedenen Sorten.",
-    "0,5 Lt Su": "Ideales Wasser für den täglichen Bedarf.",
-    "1,5 Lt Su": "Große Wasserflasche.",
-    "Nar Suyu": "Intensiver natürlicher Granatapfelgeschmack.",
-    Çay: "Traditioneller türkischer Tee für jede Tageszeit.",
-    Nescafe: "Praktischer und kräftiger Kaffeegenuss.",
-    Kapuçino: "Milder Kaffee mit Milchschaum.",
-    Salep: "Traditionelles warmes Wintergetränk.",
-    "Elma Çayı": "Leichter und aromatischer Apfeltee.",
-    Kuşburnu: "Natürlicher Hagebuttentee mit vollem Geschmack.",
+    "Portakal Suyu": "Frischer Orangengeschmack.",
+    Ayran: "Traditionelles Joghurtgetränk.",
+    Kola: "Kaltes Getränk.",
+    Fanta: "Orangenlimonade.",
+    Soda: "Mineralwasser.",
+    Cappy: "Fruchtgetränk.",
+    "0,5 Lt Su": "0,5L Wasser.",
+    "1,5 Lt Su": "1,5L Wasser.",
+    "Nar Suyu": "Granatapfelgeschmack.",
+    Çay: "Türkischer Tee.",
+    Nescafe: "Kräftiger Kaffee.",
+    Kapuçino: "Kaffee mit Milchschaum.",
+    Salep: "Warmes Wintergetränk.",
+    "Elma Çayı": "Aromatischer Apfeltee.",
+    Kuşburnu: "Hagebuttentee.",
   },
   ru: {
-    Köfte: "Кёфте на гриле в свежем хлебе со специальными соусами.",
-    Döner: "Свежий донер, приготовленный ежедневно, в тёплом хлебе.",
-    "Tavuk Döner": "Ароматный куриный донер с мягким хлебом.",
-    Ciğer: "Пряная печень, тёплый и сытный вариант.",
-    "Soya Soslu Tavuk": "Курица, маринованная в соевом соусе, с насыщенным вкусом.",
-    "Kaşarlı Tost": "Классический тост с расплавленным сыром.",
-    "Karışık Tost": "Сытный тост с колбасой, салями и сыром.",
-    "Kavurmalı Tost": "Особый тост с жареным мясом.",
-    "Sucuklu Tost": "Горячий тост с пряной турецкой колбасой.",
-    "Salamlı Tost": "Классический тост с салями и сыром.",
-    "Kavurma Kaşarlı Tost": "Тост с жареным мясом и сыром.",
-    "Kavurma Kaşarlı": "Сытный вариант с жареным мясом и сыром.",
-    "Ton Balıklı": "Приготовлен с тунцом и свежей специальной смесью.",
-    "Arnavut Ciğeri": "Классическая албанская печень со специями.",
-    Hamburger: "Сытный гамбургер со свежими ингредиентами.",
-    Sosisli: "Классический хот-дог с тёплой сосиской и мягким хлебом.",
+    Köfte: "Кёфте на гриле в свежем хлебе.",
+    Döner: "Свежий донер в тёплом хлебе.",
+    "Tavuk Döner": "Куриный донер с мягким хлебом.",
+    Ciğer: "Пряная печень, тёплая и сытная.",
+    "Soya Soslu Tavuk": "Курица в соевом соусе.",
+    "Kaşarlı Tost": "Тост с расплавленным сыром.",
+    "Karışık Tost": "Тост с колбасой, салями и сыром.",
+    "Kavurmalı Tost": "Тост с жареным мясом.",
+    "Sucuklu Tost": "Тост с турецкой колбасой.",
+    "Salamlı Tost": "Тост с салями и сыром.",
+    "Kavurma Kaşarlı Tost": "Тост с мясом и сыром.",
+    "Kavurma Kaşarlı": "Мясо с сыром.",
+    "Ton Balıklı": "Сэндвич с тунцом.",
+    "Arnavut Ciğeri": "Албанская печень.",
+    Hamburger: "Гамбургер со свежими ингредиентами.",
+    Sosisli: "Классический хот-дог.",
     "Sosisli (Amerikan salata ile)": "Хот-дог с американским салатом.",
-    Kaşarlı: "Простой и вкусный сэндвич с расплавленным сыром.",
-    Karışık: "Сытный сэндвич с разными ингредиентами.",
-    Vejetaryen: "Лёгкий и вкусный вариант с овощами.",
-    Patso: "Сытный сэндвич с хрустящим картофелем фри.",
-    "Dürüm Tavuk Döner": "Куриный донер, завёрнутый в тонкий лаваш.",
-    "Köfte Dürüm": "Кёфте на гриле в лаваше.",
-    "Ciğer Dürüm": "Пряная печень в тёплом лаваше.",
-    "Greyfurt Suyu": "Освежающий вкус грейпфрута.",
-    "Portakal Suyu": "Свежий и яркий вкус апельсина.",
-    Ayran: "Традиционный освежающий йогуртовый напиток.",
-    Kola: "Холодный освежающий газированный напиток.",
-    Fanta: "Газированный напиток со вкусом апельсина.",
-    Soda: "Натуральная газированная минеральная вода.",
-    Cappy: "Освежающий фруктовый напиток с разными вкусами.",
-    "0,5 Lt Su": "Вода для ежедневного употребления.",
-    "1,5 Lt Su": "Большая бутылка воды.",
-    "Nar Suyu": "Насыщенный натуральный вкус граната.",
-    Çay: "Традиционный турецкий чай для любого времени дня.",
-    Nescafe: "Практичный и насыщенный вкус кофе.",
-    Kapuçino: "Мягкий кофе с молочной пенкой.",
-    Salep: "Традиционный горячий зимний напиток.",
-    "Elma Çayı": "Лёгкий ароматный яблочный чай.",
-    Kuşburnu: "Натуральный чай из шиповника с насыщенным вкусом.",
+    Kaşarlı: "Сэндвич с сыром.",
+    Karışık: "Смешанный сэндвич.",
+    Vejetaryen: "Лёгкий овощной вариант.",
+    Patso: "Сэндвич с картофелем фри.",
+    "Dürüm Tavuk Döner": "Ролл с куриным донером.",
+    "Köfte Dürüm": "Ролл с кёфте.",
+    "Ciğer Dürüm": "Ролл с печенью.",
+    "Greyfurt Suyu": "Освежающий грейпфрут.",
+    "Portakal Suyu": "Свежий апельсиновый вкус.",
+    Ayran: "Традиционный айран.",
+    Kola: "Холодный газированный напиток.",
+    Fanta: "Апельсиновая газировка.",
+    Soda: "Минеральная вода.",
+    Cappy: "Фруктовый напиток.",
+    "0,5 Lt Su": "Вода 0,5 л.",
+    "1,5 Lt Su": "Вода 1,5 л.",
+    "Nar Suyu": "Гранатовый вкус.",
+    Çay: "Турецкий чай.",
+    Nescafe: "Насыщенный кофе.",
+    Kapuçino: "Кофе с молочной пенкой.",
+    Salep: "Горячий зимний напиток.",
+    "Elma Çayı": "Яблочный чай.",
+    Kuşburnu: "Чай из шиповника.",
   },
 };
 
@@ -456,7 +456,7 @@ export default function MenuPage() {
 
     setTimeout(() => {
       setLoading(false);
-    }, 600);
+    }, 400);
   };
 
   useEffect(() => {
@@ -481,15 +481,15 @@ export default function MenuPage() {
     return (
       <main className="flex min-h-screen items-center justify-center bg-[#fbf8f3] px-5">
         <div className="relative flex flex-col items-center">
-          <div className="absolute h-44 w-44 animate-spin rounded-full border-4 border-[#ead8c4] border-t-[#b85b20]" />
-          <div className="flex h-36 w-36 items-center justify-center overflow-hidden rounded-full bg-white shadow-2xl">
+          <div className="absolute h-32 w-32 animate-spin rounded-full border-4 border-[#ead8c4] border-t-[#b85b20]" />
+          <div className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-white shadow-xl">
             <img
               src="/logo.png"
               alt="Paşazade Büfe"
               className="h-full w-full scale-[1.9] object-contain"
             />
           </div>
-          <p className="mt-10 text-sm font-black tracking-[0.25em] text-[#7a3b16]/70">
+          <p className="mt-8 text-xs font-black tracking-[0.22em] text-[#7a3b16]/70">
             {t.loading}
           </p>
         </div>
@@ -498,43 +498,40 @@ export default function MenuPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#fbf8f3] px-4 py-5 text-[#23150d]">
-      <div className="fixed right-4 top-4 z-50 flex gap-2">
-        <Link
-          href="/"
-          className="rounded-full border border-black/10 bg-white/90 px-4 py-2 text-xs font-black shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white"
-        >
-          {t.home}
-        </Link>
+    <main className="min-h-screen bg-[#fbf8f3] px-3 pb-6 pt-[74px] text-[#23150d] md:px-4 md:pt-[92px]">
+      <header className="fixed left-0 right-0 top-0 z-50 border-b border-black/5 bg-[#fbf8f3]/95 px-3 py-2 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="h-11 w-28 overflow-hidden md:h-14 md:w-36">
+              <img
+                src="/logo.png"
+                alt="Paşazade Büfe"
+                className="h-full w-full scale-[1.75] object-contain"
+              />
+            </div>
+          </Link>
 
-        <a
-          href="https://wa.me/902125178513"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-full bg-[#1b100b] px-4 py-2 text-xs font-black text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#b85b20]"
-        >
-          {t.contact}
-        </a>
-      </div>
+          <a
+            href="https://wa.me/902125178513"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-[#1b100b] px-4 py-2 text-xs font-black text-white shadow-md transition hover:bg-[#b85b20] md:px-5 md:py-2.5 md:text-sm"
+          >
+            {t.contact}
+          </a>
+        </div>
+      </header>
 
       <div className="mx-auto max-w-6xl">
-        <div className="mb-8 flex justify-center pt-6">
-          <img
-            src="/logo.png"
-            alt="Paşazade Büfe"
-            className="h-32 w-auto object-contain drop-shadow-lg md:h-44"
-          />
-        </div>
-
-        <div className="sticky top-0 z-40 -mx-4 mb-8 bg-[#fbf8f3]/90 px-4 py-4 backdrop-blur-xl">
-          <div className="mx-auto flex max-w-6xl gap-3 overflow-x-auto pb-1">
+        <div className="sticky top-[61px] z-40 -mx-3 mb-3 bg-[#fbf8f3]/95 px-3 py-2 backdrop-blur-xl md:top-[75px] md:mb-7 md:py-4">
+          <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto pb-1 md:gap-3">
             {categoriesTR.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`shrink-0 rounded-full px-5 py-3 text-sm font-black transition-all duration-300 ${
+                className={`shrink-0 rounded-full px-4 py-2 text-xs font-black transition-all duration-300 md:px-5 md:py-3 md:text-sm ${
                   activeCategory === cat
-                    ? "bg-[#1b100b] text-white shadow-lg"
+                    ? "bg-[#1b100b] text-white shadow-md"
                     : "border border-black/10 bg-white text-[#2a190f] shadow-sm hover:bg-[#f6eadb]"
                 }`}
               >
@@ -544,14 +541,14 @@ export default function MenuPage() {
           </div>
         </div>
 
-        <section className="space-y-8">
+        <section className="space-y-2 md:space-y-8">
           {filtered.map((item, index) => (
             <article
-  key={item.id}
-  className="grid grid-cols-[90px_1fr] gap-3 md:grid-cols-[42%_58%] items-center
-  rounded-2xl bg-white shadow-md p-3 md:p-0 md:rounded-[2.2rem] md:shadow-[0_18px_50px_rgba(0,0,0,0.08)]"
->
-              <div className="h-64 overflow-hidden bg-[#ead2b9] md:h-full">
+              key={item.id}
+              className="grid grid-cols-[82px_1fr] gap-3 rounded-2xl bg-white p-2 shadow-sm transition hover:shadow-md md:grid-cols-[42%_58%] md:overflow-hidden md:rounded-[2.2rem] md:p-0 md:shadow-[0_18px_50px_rgba(0,0,0,0.08)]"
+              style={{ animationDelay: `${index * 25}ms` }}
+            >
+              <div className="h-20 w-20 overflow-hidden rounded-xl bg-[#ead2b9] md:h-full md:w-full md:rounded-none">
                 {item.image_url ? (
                   <img
                     src={item.image_url}
@@ -559,37 +556,37 @@ export default function MenuPage() {
                     className="h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
                 ) : (
-                  <div className="flex h-full w-full items-center justify-center text-6xl">
+                  <div className="flex h-full w-full items-center justify-center text-2xl md:text-6xl">
                     🍽️
                   </div>
                 )}
               </div>
 
-              <div className="flex min-h-[250px] flex-col justify-center p-6 md:p-10">
-                <div className="mb-4 flex items-start justify-between gap-5">
-                  <div>
-                    <p className="mb-3 text-[11px] font-black uppercase tracking-[0.28em] text-[#b96324]">
+              <div className="flex min-w-0 flex-col justify-center py-1 pr-1 md:min-h-[250px] md:p-10">
+                <div className="flex items-start justify-between gap-2 md:mb-4 md:gap-5">
+                  <div className="min-w-0">
+                    <p className="mb-1 text-[9px] font-black uppercase tracking-[0.18em] text-[#b96324] md:mb-3 md:text-[11px] md:tracking-[0.28em]">
                       {translateCategory(item.category)}
                     </p>
 
-                    <h2 className="text-3xl font-black uppercase leading-tight text-[#1b100b] md:text-4xl">
+                    <h2 className="truncate text-base font-black uppercase leading-tight text-[#1b100b] md:whitespace-normal md:text-4xl">
                       {translateProduct(item.name)}
                     </h2>
                   </div>
 
-                  <p className="shrink-0 text-3xl font-black text-[#4a403a] md:text-4xl">
+                  <p className="shrink-0 text-base font-black text-[#4a403a] md:text-4xl">
                     {item.price || ""}
                   </p>
                 </div>
 
-                <p className="max-w-xl text-lg leading-relaxed text-black/55 md:text-2xl">
+                <p className="mt-1 line-clamp-1 text-xs leading-relaxed text-black/55 md:mt-0 md:line-clamp-none md:max-w-xl md:text-2xl">
                   {translateDescription(item.name, item.description)}
                 </p>
 
-                <div className="mt-7">
+                <div className="mt-2 md:mt-7">
                   <Link
                     href={`/${lang}/menu/${item.id}`}
-                    className="inline-flex rounded-full bg-[#1b100b] px-6 py-3 text-sm font-black text-white shadow-lg transition hover:bg-[#b96324]"
+                    className="inline-flex rounded-full bg-[#1b100b] px-3 py-1.5 text-[10px] font-black text-white shadow-md transition hover:bg-[#b96324] md:px-6 md:py-3 md:text-sm"
                   >
                     {t.view}
                   </Link>
@@ -605,19 +602,6 @@ export default function MenuPage() {
           )}
         </section>
       </div>
-
-      <style jsx global>{`
-        @keyframes fadeUp {
-          from {
-            opacity: 0;
-            transform: translateY(18px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </main>
   );
 }
