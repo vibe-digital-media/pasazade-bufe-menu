@@ -541,58 +541,57 @@ export default function MenuPage() {
           </div>
         </div>
 
-        <section className="space-y-2 md:space-y-8">
+        <section className="grid gap-2 md:grid-cols-2 md:gap-3">
           {filtered.map((item, index) => (
             <article
-              key={item.id}
-              className="grid grid-cols-[82px_1fr] gap-3 rounded-2xl bg-white p-2 shadow-sm transition hover:shadow-md md:grid-cols-[42%_58%] md:overflow-hidden md:rounded-[2.2rem] md:p-0 md:shadow-[0_18px_50px_rgba(0,0,0,0.08)]"
-              style={{ animationDelay: `${index * 25}ms` }}
-            >
-              <div className="h-20 w-20 overflow-hidden rounded-xl bg-[#ead2b9] md:h-full md:w-full md:rounded-none">
-                {item.image_url ? (
-                  <img
-                    src={item.image_url}
-                    alt={translateProduct(item.name)}
-                    className="h-full w-full object-cover transition duration-700 hover:scale-105"
-                  />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center text-2xl md:text-6xl">
-                    🍽️
-                  </div>
-                )}
-              </div>
+  key={item.id}
+  className="grid grid-cols-[82px_1fr] gap-3 rounded-2xl bg-white p-2 shadow-sm transition hover:shadow-md md:grid-cols-[110px_1fr] md:items-center md:rounded-2xl md:p-3"
+>
+  <div className="h-20 w-20 overflow-hidden rounded-xl bg-[#ead2b9] md:h-24 md:w-24">
+    {item.image_url ? (
+      <img
+        src={item.image_url}
+        alt={translateProduct(item.name)}
+        className="h-full w-full object-cover transition duration-700 hover:scale-105"
+      />
+    ) : (
+      <div className="flex h-full w-full items-center justify-center text-2xl">
+        🍽️
+      </div>
+    )}
+  </div>
 
-              <div className="flex min-w-0 flex-col justify-center py-1 pr-1 md:min-h-[250px] md:p-10">
-                <div className="flex items-start justify-between gap-2 md:mb-4 md:gap-5">
-                  <div className="min-w-0">
-                    <p className="mb-1 text-[9px] font-black uppercase tracking-[0.18em] text-[#b96324] md:mb-3 md:text-[11px] md:tracking-[0.28em]">
-                      {translateCategory(item.category)}
-                    </p>
+  <div className="flex min-w-0 flex-col justify-center py-1 pr-1">
+    <div className="flex items-start justify-between gap-2">
+      <div className="min-w-0">
+        <p className="mb-1 text-[9px] font-black uppercase tracking-[0.18em] text-[#b96324]">
+          {translateCategory(item.category)}
+        </p>
 
-                    <h2 className="truncate text-base font-black uppercase leading-tight text-[#1b100b] md:whitespace-normal md:text-4xl">
-                      {translateProduct(item.name)}
-                    </h2>
-                  </div>
+        <h2 className="truncate text-base font-black uppercase leading-tight text-[#1b100b] md:text-lg">
+          {translateProduct(item.name)}
+        </h2>
+      </div>
 
-                  <p className="shrink-0 text-base font-black text-[#4a403a] md:text-4xl">
-                    {item.price || ""}
-                  </p>
-                </div>
+      <p className="shrink-0 text-base font-black text-[#4a403a] md:text-lg">
+        {item.price || ""}
+      </p>
+    </div>
 
-                <p className="mt-1 line-clamp-1 text-xs leading-relaxed text-black/55 md:mt-0 md:line-clamp-none md:max-w-xl md:text-2xl">
-                  {translateDescription(item.name, item.description)}
-                </p>
+    <p className="mt-1 line-clamp-1 text-xs leading-relaxed text-black/55 md:text-sm">
+      {translateDescription(item.name, item.description)}
+    </p>
 
-                <div className="mt-2 md:mt-7">
-                  <Link
-                    href={`/${lang}/menu/${item.id}`}
-                    className="inline-flex rounded-full bg-[#1b100b] px-3 py-1.5 text-[10px] font-black text-white shadow-md transition hover:bg-[#b96324] md:px-6 md:py-3 md:text-sm"
-                  >
-                    {t.view}
-                  </Link>
-                </div>
-              </div>
-            </article>
+    <div className="mt-2">
+      <Link
+        href={`/${lang}/menu/${item.id}`}
+        className="inline-flex rounded-full bg-[#1b100b] px-3 py-1.5 text-[10px] font-black text-white shadow-md transition hover:bg-[#b96324] md:text-xs"
+      >
+        {t.view}
+      </Link>
+    </div>
+  </div>
+</article>
           ))}
 
           {filtered.length === 0 && (
@@ -601,6 +600,16 @@ export default function MenuPage() {
             </div>
           )}
         </section>
+        <footer className="mt-10 pb-4 text-center text-xs font-semibold text-black/35">
+  <a
+    href="https://www.vibereklam.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition hover:text-[#b96324]"
+  >
+    Vibe Reklam tarafından hazırlanmıştır.
+  </a>
+</footer>
       </div>
     </main>
   );
