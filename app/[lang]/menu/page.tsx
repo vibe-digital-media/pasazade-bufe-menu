@@ -547,10 +547,10 @@ export default function MenuPage() {
         <section className="space-y-8">
           {filtered.map((item, index) => (
             <article
-              key={item.id}
-              className="grid animate-[fadeUp_0.45s_ease_both] overflow-hidden rounded-[2.2rem] bg-white shadow-[0_18px_50px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(0,0,0,0.12)] md:grid-cols-[42%_58%]"
-              style={{ animationDelay: `${index * 35}ms` }}
-            >
+  key={item.id}
+  className="grid grid-cols-[90px_1fr] gap-3 md:grid-cols-[42%_58%] items-center
+  rounded-2xl bg-white shadow-md p-3 md:p-0 md:rounded-[2.2rem] md:shadow-[0_18px_50px_rgba(0,0,0,0.08)]"
+>
               <div className="h-64 overflow-hidden bg-[#ead2b9] md:h-full">
                 {item.image_url ? (
                   <img
