@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
@@ -42,8 +43,6 @@ const categoryOrder = [
 
 const ui = {
   tr: {
-    menu: "Menü",
-    subtitle: "Beyazıt’ın hızlı, taze ve lezzetli büfe menüsü.",
     all: "Tümü",
     view: "İncele",
     empty: "Bu kategoride ürün yok.",
@@ -52,8 +51,6 @@ const ui = {
     loading: "Menü hazırlanıyor...",
   },
   en: {
-    menu: "Menu",
-    subtitle: "Fresh and fast local street food in Beyazıt.",
     all: "All",
     view: "View",
     empty: "No products in this category.",
@@ -62,8 +59,6 @@ const ui = {
     loading: "Preparing menu...",
   },
   de: {
-    menu: "Speisekarte",
-    subtitle: "Frische und schnelle lokale Küche in Beyazıt.",
     all: "Alle",
     view: "Ansehen",
     empty: "Keine Produkte in dieser Kategorie.",
@@ -72,8 +67,6 @@ const ui = {
     loading: "Menü wird vorbereitet...",
   },
   ru: {
-    menu: "Меню",
-    subtitle: "Свежая и быстрая местная кухня в Беязыте.",
     all: "Все",
     view: "Подробнее",
     empty: "В этой категории пока нет товаров.",
@@ -486,10 +479,9 @@ export default function MenuPage() {
 
   if (loading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#f6eadb] px-5">
+      <main className="flex min-h-screen items-center justify-center bg-[#fbf8f3] px-5">
         <div className="relative flex flex-col items-center">
           <div className="absolute h-44 w-44 animate-spin rounded-full border-4 border-[#ead8c4] border-t-[#b85b20]" />
-
           <div className="flex h-36 w-36 items-center justify-center overflow-hidden rounded-full bg-white shadow-2xl">
             <img
               src="/logo.png"
@@ -497,7 +489,6 @@ export default function MenuPage() {
               className="h-full w-full scale-[1.9] object-contain"
             />
           </div>
-
           <p className="mt-10 text-sm font-black tracking-[0.25em] text-[#7a3b16]/70">
             {t.loading}
           </p>
@@ -507,62 +498,44 @@ export default function MenuPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f6eadb] px-4 py-5 text-[#23150d]">
+    <main className="min-h-screen bg-[#fbf8f3] px-4 py-5 text-[#23150d]">
       <div className="fixed right-4 top-4 z-50 flex gap-2">
-        <a
+        <Link
           href="/"
           className="rounded-full border border-black/10 bg-white/90 px-4 py-2 text-xs font-black shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white"
         >
           {t.home}
-        </a>
+        </Link>
 
         <a
           href="https://wa.me/902125178513"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full bg-gradient-to-r from-[#6b2f12] via-[#b85b20] to-[#f2a23a] px-4 py-2 text-xs font-black text-white shadow-lg transition hover:-translate-y-0.5"
+          className="rounded-full bg-[#1b100b] px-4 py-2 text-xs font-black text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#b85b20]"
         >
           {t.contact}
         </a>
       </div>
 
-      <div className="mx-auto max-w-7xl">
-        <header className="mb-7 rounded-[2.5rem] border border-black/10 bg-white/70 p-6 shadow-xl backdrop-blur-xl md:p-8">
-          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-            <div className="text-center md:text-left">
-              <p className="mb-3 text-xs font-black tracking-[0.48em] text-[#b85b20]">
-                PAŞAZADE BÜFE
-              </p>
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-8 flex justify-center pt-6">
+          <img
+            src="/logo.png"
+            alt="Paşazade Büfe"
+            className="h-32 w-auto object-contain drop-shadow-lg md:h-44"
+          />
+        </div>
 
-              <h1 className="text-5xl font-black tracking-tight text-[#1b100b] md:text-7xl">
-                {t.menu}
-              </h1>
-
-              <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-black/55 md:mx-0 md:text-base">
-                {t.subtitle}
-              </p>
-            </div>
-
-            <div className="hidden h-28 w-52 items-center justify-center overflow-hidden md:flex md:h-36 md:w-64">
-              <img
-                src="/logo.png"
-                alt="Paşazade Büfe"
-                className="h-full w-full scale-[1.65] object-contain drop-shadow-xl"
-              />
-            </div>
-          </div>
-        </header>
-
-        <div className="sticky top-0 z-40 -mx-4 mb-7 bg-[#f6eadb]/85 px-4 py-4 backdrop-blur-2xl">
-          <div className="mx-auto flex max-w-7xl gap-3 overflow-x-auto pb-1">
+        <div className="sticky top-0 z-40 -mx-4 mb-8 bg-[#fbf8f3]/90 px-4 py-4 backdrop-blur-xl">
+          <div className="mx-auto flex max-w-6xl gap-3 overflow-x-auto pb-1">
             {categoriesTR.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`shrink-0 rounded-full px-5 py-3 text-sm font-black transition-all duration-300 ${
                   activeCategory === cat
-                    ? "scale-105 bg-gradient-to-r from-[#6b2f12] via-[#b85b20] to-[#f2a23a] text-white shadow-xl"
-                    : "border border-black/10 bg-white/80 text-[#2a190f] shadow-sm hover:-translate-y-0.5 hover:bg-white hover:shadow-md"
+                    ? "bg-[#1b100b] text-white shadow-lg"
+                    : "border border-black/10 bg-white text-[#2a190f] shadow-sm hover:bg-[#f6eadb]"
                 }`}
               >
                 {cat === "Tümü" ? t.all : translateCategory(cat)}
@@ -571,57 +544,62 @@ export default function MenuPage() {
           </div>
         </div>
 
-        <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <section className="space-y-8">
           {filtered.map((item, index) => (
             <article
               key={item.id}
-              className="group animate-[fadeUp_0.45s_ease_both] overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="grid animate-[fadeUp_0.45s_ease_both] overflow-hidden rounded-[2.2rem] bg-white shadow-[0_18px_50px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_70px_rgba(0,0,0,0.12)] md:grid-cols-[42%_58%]"
               style={{ animationDelay: `${index * 35}ms` }}
             >
-              <div className="relative h-56 overflow-hidden bg-[#ead2b9]">
+              <div className="h-64 overflow-hidden bg-[#ead2b9] md:h-full">
                 {item.image_url ? (
                   <img
                     src={item.image_url}
                     alt={translateProduct(item.name)}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    className="h-full w-full object-cover transition duration-700 hover:scale-105"
                   />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center text-6xl">
                     🍽️
                   </div>
                 )}
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
-
-                <p className="absolute left-4 top-4 rounded-full bg-white/90 px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#bd5a19] shadow-md backdrop-blur">
-                  {translateCategory(item.category)}
-                </p>
               </div>
 
-              <div className="p-5">
-                <h2 className="min-h-[60px] text-2xl font-black leading-tight text-[#1b100b]">
-                  {translateProduct(item.name)}
-                </h2>
+              <div className="flex min-h-[250px] flex-col justify-center p-6 md:p-10">
+                <div className="mb-4 flex items-start justify-between gap-5">
+                  <div>
+                    <p className="mb-3 text-[11px] font-black uppercase tracking-[0.28em] text-[#b96324]">
+                      {translateCategory(item.category)}
+                    </p>
 
-                <p className="mt-2 line-clamp-2 min-h-[44px] text-sm leading-relaxed text-black/55">
+                    <h2 className="text-3xl font-black uppercase leading-tight text-[#1b100b] md:text-4xl">
+                      {translateProduct(item.name)}
+                    </h2>
+                  </div>
+
+                  <p className="shrink-0 text-3xl font-black text-[#4a403a] md:text-4xl">
+                    {item.price || ""}
+                  </p>
+                </div>
+
+                <p className="max-w-xl text-lg leading-relaxed text-black/55 md:text-2xl">
                   {translateDescription(item.name, item.description)}
                 </p>
 
-                <div className="mt-5 flex items-center justify-between gap-3">
-                  <p className="text-3xl font-black text-[#733313]">
-                    {item.price || ""}
-                  </p>
-
-                  <button className="rounded-full bg-[#1b100b] px-5 py-3 text-xs font-black text-white shadow-lg transition group-hover:bg-gradient-to-r group-hover:from-[#6b2f12] group-hover:to-[#f2a23a]">
+                <div className="mt-7">
+                  <Link
+                    href={`/${lang}/menu/${item.id}`}
+                    className="inline-flex rounded-full bg-[#1b100b] px-6 py-3 text-sm font-black text-white shadow-lg transition hover:bg-[#b96324]"
+                  >
                     {t.view}
-                  </button>
+                  </Link>
                 </div>
               </div>
             </article>
           ))}
 
           {filtered.length === 0 && (
-            <div className="col-span-full rounded-3xl bg-white p-8 text-center text-sm text-black/50 shadow-sm">
+            <div className="rounded-3xl bg-white p-8 text-center text-sm text-black/50 shadow-sm">
               {t.empty}
             </div>
           )}
