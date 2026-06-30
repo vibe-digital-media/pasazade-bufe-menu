@@ -29,7 +29,85 @@ type Product = {
   is_active: boolean;
 };
 
-export default function AdminPage() {
+// ============================================================
+// AUTH HOOK
+// ============================================================
+function useAdminAuth() {
+  const [session, setSession] = useState<any>(undefined); // undefined = yükleniyor
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [authError, setAuthError] = useState("");
+  const [authLoading, setAuthLoading] = useState(false);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => setSession(data.session));
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, newSession) => {
+      setSession(newSession);
+    });
+    return () => listener.subscription.unsubscribe();
+  }, []);
+
+  const login = async () => {
+    setAuthError("");
+    setAuthLoading(true);
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    setAuthLoading(false);
+    if (error) setAuthError("Email veya şifre hatalı.");
+  };
+
+  const logout = async () => {
+    await supabase.auth.signOut();
+  };
+
+  return { session, email, setEmail, password, setPassword, login, logout, authError, authLoading };
+}
+
+// ============================================================
+// LOGIN EKRANI
+// ============================================================
+function AdminLogin({ auth }: { auth: ReturnType<typeof useAdminAuth> }) {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-[#f8f5ef] p-5">
+      <div className="w-full max-w-sm rounded-3xl bg-white p-8 shadow-sm">
+        <img src="/logo.png" alt="Paşazade Büfe" className="mx-auto mb-6 w-40" />
+        <h1 className="mb-5 text-center text-xl font-extrabold">Admin Girişi</h1>
+
+        <input
+          type="email"
+          placeholder="Email"
+          value={auth.email}
+          onChange={(e) => auth.setEmail(e.target.value)}
+          className="mb-3 w-full rounded-xl border border-black/10 p-3 outline-none"
+        />
+        <input
+          type="password"
+          placeholder="Şifre"
+          value={auth.password}
+          onChange={(e) => auth.setPassword(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && auth.login()}
+          className="mb-3 w-full rounded-xl border border-black/10 p-3 outline-none"
+        />
+
+        {auth.authError && (
+          <p className="mb-3 text-sm font-bold text-red-600">{auth.authError}</p>
+        )}
+
+        <button
+          onClick={auth.login}
+          disabled={auth.authLoading}
+          className="w-full rounded-xl bg-black px-7 py-3 font-bold text-white disabled:opacity-50"
+        >
+          {auth.authLoading ? "Giriş yapılıyor..." : "Giriş Yap"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================
+// ASIL ADMİN PANELİ (sadece giriş yapanlar görür)
+// ============================================================
+function AdminPanel({ onLogout }: { onLogout: () => void }) {
   const [activeTab, setActiveTab] = useState<"home" | "add" | "list" | "bulk">("home");
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("Tümü");
@@ -270,7 +348,13 @@ export default function AdminPage() {
   return (
     <main className="min-h-screen bg-[#f8f5ef] p-5 text-[#171717]">
       <div className="mx-auto max-w-6xl">
-        <header className="mb-8 flex flex-col items-center text-center">
+        <header className="mb-8 flex flex-col items-center text-center relative">
+          <button
+            onClick={onLogout}
+            className="absolute right-0 top-0 rounded-full bg-black/80 px-4 py-2 text-xs font-bold text-white"
+          >
+            Çıkış Yap
+          </button>
           <img src="/logo.png" alt="Paşazade Büfe" className="mb-4 w-64" />
           <h1 className="text-3xl font-extrabold">Admin Panel</h1>
           <p className="mt-2 text-sm text-black/50">
@@ -452,4 +536,25 @@ export default function AdminPage() {
       </div>
     </main>
   );
+}
+
+// ============================================================
+// DIŞARIYA AÇILAN ASIL COMPONENT
+// ============================================================
+export default function AdminPage() {
+  const auth = useAdminAuth();
+
+  if (auth.session === undefined) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[#f8f5ef]">
+        <p className="text-sm text-black/50">Yükleniyor...</p>
+      </div>
+    );
+  }
+
+  if (!auth.session) {
+    return <AdminLogin auth={auth} />;
+  }
+
+  return <AdminPanel onLogout={auth.logout} />;
 }
